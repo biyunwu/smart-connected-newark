@@ -1,14 +1,24 @@
 module.exports = {
   siteMetadata: {
     title: "Smart and Connected Newark Project",
+    siteUrl: `https://www.example.com`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: "123",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
       },
     },
     "gatsby-plugin-react-helmet",

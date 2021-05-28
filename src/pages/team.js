@@ -4,7 +4,7 @@ import HeaderLinks from "../components/Header/HeaderLinks.js";
 import Parallax from "../components/Parallax/Parallax.js";
 import GridContainer from "../components/Grid/GridContainer.js";
 import GridItem from "../components/Grid/GridItem.js";
-import Home from "../components/Home";
+import Team from "../components/Team.js";
 import Footer from "../components/Footer/Footer.js";
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
@@ -13,7 +13,7 @@ import "../material_style/scss/material-kit-react.scss?v=1.10.0";
 
 const useStyles = makeStyles(styles);
 
-export default function IndexPage(props) {
+export default function TeamPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
@@ -33,13 +33,14 @@ export default function IndexPage(props) {
         <Parallax
           image={require("../images/smart_city.png").default}
           filter={true}
+          style={{ maxHeight: "100px" }}
         >
           <div className={classes.container}>
             <GridContainer>
               <GridItem>
                 <div className={classes.brand} style={{ paddingTop: 40 }}>
                   <h1 className={classes.title}>
-                    Smart & Connected Newark Project.
+                    Team.
                   </h1>
                 </div>
               </GridItem>
@@ -47,7 +48,7 @@ export default function IndexPage(props) {
           </div>
         </Parallax>
         <div className={classNames(classes.main)}>
-          <Home />
+          <Team />
         </div>
       </main>
       <Footer />

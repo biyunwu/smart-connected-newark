@@ -1,37 +1,37 @@
 import * as React from "react";
-import Header from "../components/Header/Header.js";
-import HeaderLinks from "../components/Header/HeaderLinks.js";
+// import Header from "../components/Header/Header.js";
+// import HeaderLinks from "../components/Header/HeaderLinks.js";
 import Parallax from "../components/Parallax/Parallax.js";
 import GridContainer from "../components/Grid/GridContainer.js";
 import GridItem from "../components/Grid/GridItem.js";
 import Team from "../components/Team.js";
-import Footer from "../components/Footer/Footer.js";
+// import Footer from "../components/Footer/Footer.js";
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "../material_style/components.js";
 import "../material_style/scss/material-kit-react.scss?v=1.10.0";
+import Layout from "../components/Layout";
 
 const useStyles = makeStyles(styles);
 
 export default function TeamPage(props) {
   const classes = useStyles();
-  const { ...rest } = props;
+  // const { ...rest } = props;
   return (
-    <>
-      <main>
-        <Header
-          brand="Smart & Connected"
-          rightLinks={<HeaderLinks />}
-          fixed
-          color="transparent"
-          changeColorOnScroll={{
-            height: 400,
-            color: "white",
-          }}
-          {...rest}
-        />
+    <Layout pageName="team">
+        {/*<Header*/}
+        {/*  brand="Smart & Connected"*/}
+        {/*  rightLinks={<HeaderLinks />}*/}
+        {/*  fixed*/}
+        {/*  color="transparent"*/}
+        {/*  changeColorOnScroll={{*/}
+        {/*    height: 400,*/}
+        {/*    color: "white",*/}
+        {/*  }}*/}
+        {/*  {...rest}*/}
+        {/*/>*/}
         <Parallax
-          image={require("../images/smart_city.png").default}
+          image={require("../images/team_5k.png").default}
           filter={true}
           style={{ maxHeight: "100px" }}
         >
@@ -50,8 +50,6 @@ export default function TeamPage(props) {
         <div className={classNames(classes.main)}>
           <Team />
         </div>
-      </main>
-      <Footer />
-    </>
+    </Layout>
   );
 }

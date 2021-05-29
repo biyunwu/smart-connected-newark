@@ -3,7 +3,7 @@ import React from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
 import IconButton from "@material-ui/core/IconButton";
 // react components for routing our app without refresh
-// import { Link } from "react-router-dom";
+import { Link } from "gatsby";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -17,6 +17,7 @@ import ListItem from "@material-ui/core/ListItem";
 // core components
 // import CustomDropdown from "./CustomDropdown.js";
 import Button from "./Button.js";
+import {siteInfo} from "../../data/site/siteInfo";
 
 import styles from "../../material_style/partial_style/headerLinksStyle";
 
@@ -24,6 +25,7 @@ const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
   const classes = useStyles();
+  const pageName = props.pageName;
   return (
     <List className={classes.list}>
       {/*<ListItem className={classes.listItem}>*/}
@@ -49,61 +51,78 @@ export default function HeaderLinks(props) {
       {/*    ]}*/}
       {/*  />*/}
       {/*</ListItem>*/}
-      <ListItem className={classes.listItem}>
-        <Button
-          href="./"
-          color="transparent"
-          className={classes.navLink}
-          style={{ textDecoration: "underline" }}
-        >
-          Home
-        </Button>
-      </ListItem>
-        <ListItem className={classes.listItem}>
-            <Button
-                href="./team"
-                color="transparent"
-                className={classes.navLink}
-            >
-                Team
-            </Button>
-        </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="./"
-          color="transparent"
-          className={classes.navLink}
-        >
-          Research
-        </Button>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="./"
-          color="transparent"
-          className={classes.navLink}
-        >
-          Publication
-        </Button>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="./"
-          color="transparent"
-          className={classes.navLink}
-        >
-          Study
-        </Button>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="./"
-          color="transparent"
-          className={classes.navLink}
-        >
-          Impact
-        </Button>
-      </ListItem>
+        {siteInfo.pageNames.map(name =>
+            <ListItem className={classes.listItem}>
+              <Link to={name === siteInfo.pageNames[0] ? "/" : "/" + name}
+                    className={classes.listItem}
+              >
+                <Button
+                    // href={name === siteInfo.pageNames[0] ? siteInfo.domain : siteInfo.domain + name}
+                    color="transparent"
+                    className={classes.navLink}
+                    style={pageName === name ? { textDecoration: "underline" } : null }
+                >
+                  {name.charAt(0).toUpperCase() + name.slice(1)}
+                </Button>
+              </Link>
+            </ListItem>
+        )}
+      {/*<ListItem className={classes.listItem}>*/}
+      {/*  <Button*/}
+      {/*    href="./"*/}
+      {/*    color="transparent"*/}
+      {/*    className={classes.navLink}*/}
+      {/*    style={pageName === "home" && { textDecoration: "underline" }}*/}
+      {/*  >*/}
+      {/*    Home*/}
+      {/*  </Button>*/}
+      {/*</ListItem>*/}
+      {/*  <ListItem className={classes.listItem}>*/}
+      {/*      <Button*/}
+      {/*          href="./team"*/}
+      {/*          color="transparent"*/}
+      {/*          className={classes.navLink}*/}
+      {/*          style={pageName === "home" && { textDecoration: "underline" }}*/}
+      {/*      >*/}
+      {/*          Team*/}
+      {/*      </Button>*/}
+      {/*  </ListItem>*/}
+      {/*<ListItem className={classes.listItem}>*/}
+      {/*  <Button*/}
+      {/*    href="./"*/}
+      {/*    color="transparent"*/}
+      {/*    className={classes.navLink}*/}
+      {/*  >*/}
+      {/*    Research*/}
+      {/*  </Button>*/}
+      {/*</ListItem>*/}
+      {/*<ListItem className={classes.listItem}>*/}
+      {/*  <Button*/}
+      {/*    href="./"*/}
+      {/*    color="transparent"*/}
+      {/*    className={classes.navLink}*/}
+      {/*  >*/}
+      {/*    Publication*/}
+      {/*  </Button>*/}
+      {/*</ListItem>*/}
+      {/*<ListItem className={classes.listItem}>*/}
+      {/*  <Button*/}
+      {/*    href="./"*/}
+      {/*    color="transparent"*/}
+      {/*    className={classes.navLink}*/}
+      {/*  >*/}
+      {/*    Study*/}
+      {/*  </Button>*/}
+      {/*</ListItem>*/}
+      {/*<ListItem className={classes.listItem}>*/}
+      {/*  <Button*/}
+      {/*    href="./"*/}
+      {/*    color="transparent"*/}
+      {/*    className={classes.navLink}*/}
+      {/*  >*/}
+      {/*    Impact*/}
+      {/*  </Button>*/}
+      {/*</ListItem>*/}
     </List>
   );
 }

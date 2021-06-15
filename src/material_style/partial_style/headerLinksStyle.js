@@ -12,6 +12,7 @@ const headerLinksStyle = (theme) => ({
     paddingTop: "0",
     paddingBottom: "0",
     color: "inherit",
+    display: "inline-block",
   },
   listItem: {
     float: "left",
@@ -39,18 +40,31 @@ const headerLinksStyle = (theme) => ({
   navLink: {
     color: "inherit",
     position: "relative",
-    padding: "0.9375rem",
+    padding: "0.8rem",
     fontWeight: "400",
-    fontSize: "12px",
+    fontSize: "1em",
     textTransform: "uppercase",
     borderRadius: "3px",
     lineHeight: "20px",
     textDecoration: "none",
     margin: "0px",
     display: "inline-flex",
+    // "&::before": {
+    //   display: "block",
+    //   content: "attr(title)",
+    //   fontWeight: "600",
+    //   height: 0,
+    //   overflow: "hidden",
+    //   visibility: "hidden",
+    // },
     "&:hover,&:focus": {
-      color: "inherit",
-      background: "rgba(200, 200, 200, 0.2)",
+      color: "black",
+      // use text shadow to mimic bold text in order to avoid element being moved when it is focused.
+      // textShadow: "0 0 .1px black, 0 0 .1px black, 0 0 .1px black",
+      // fontWeight: 600,
+      background: "rgba(255, 255, 255, 0.8)",
+      // textDecoration: "underline",
+      // transition: "all 0.3s ease",
     },
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% - 30px)",

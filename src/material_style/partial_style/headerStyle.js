@@ -54,12 +54,14 @@ const headerStyle = {
   title: {
     ...defaultFont,
     lineHeight: "30px",
-    fontSize: "18px",
+    fontSize: "15px",
+    fontWeight: "400",
     borderRadius: "3px",
     textTransform: "none",
     color: "inherit",
-    padding: "8px 16px",
-    letterSpacing: "unset",
+    padding: "8px 8px 8px 0px",
+    letterSpacing: "0px",
+    whiteSpace: "nowrap",
     "&:hover,&:focus": {
       color: "inherit",
       background: "transparent",
@@ -104,12 +106,12 @@ const headerStyle = {
     boxShadow:
       "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(233, 30, 99, 0.46)",
   },
-  // transparent: {
-  //   backgroundColor: "transparent !important",
-  //   boxShadow: "none",
-  //   paddingTop: "25px",
-  //   color: "#FFFFFF",
-  // },
+  transparent: {
+    backgroundColor: "transparent !important",
+    boxShadow: "none",
+    paddingTop: "25px",
+    color: "#FFFFFF",
+  },
   dark: {
     color: "#FFFFFF",
     backgroundColor: "#212121 !important",

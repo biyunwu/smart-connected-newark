@@ -1,37 +1,28 @@
 import * as React from "react";
-// import Header from "../components/Header/Header.js";
-// import HeaderLinks from "../components/Header/HeaderLinks.js";
-import Parallax from "../components/Parallax/Parallax.js";
-import GridContainer from "../components/Grid/GridContainer.js";
-import GridItem from "../components/Grid/GridItem.js";
+import Parallax from "../components/partial_components/Parallax/Parallax.js";
+import GridContainer from "../components/partial_components/Grid/GridContainer.js";
+import GridItem from "../components/partial_components/Grid/GridItem.js";
 import Team from "../components/Team.js";
-// import Footer from "../components/Footer/Footer.js";
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "../material_style/components.js";
 import "../material_style/scss/material-kit-react.scss?v=1.10.0";
-import Layout from "../components/Layout";
+import Layout from "../components/partial_components/Layout";
+import Seo from "../components/partial_components/Seo";
 
 const useStyles = makeStyles(styles);
 
-export default function TeamPage(props) {
+export default function TeamPage() {
   const classes = useStyles();
-  // const { ...rest } = props;
+  const pageName = "team"
   return (
-    <Layout pageName="team">
-        {/*<Header*/}
-        {/*  brand="Smart & Connected"*/}
-        {/*  rightLinks={<HeaderLinks />}*/}
-        {/*  fixed*/}
-        {/*  color="transparent"*/}
-        {/*  changeColorOnScroll={{*/}
-        {/*    height: 400,*/}
-        {/*    color: "white",*/}
-        {/*  }}*/}
-        {/*  {...rest}*/}
-        {/*/>*/}
+    <Layout>
+        <Seo
+            title={pageName.charAt(0).toUpperCase() + pageName.slice(1)}
+            description="Team members from research universities, industry and NGOs."
+        />
         <Parallax
-          image={require("../images/team_5k.png").default}
+          image={require("../images/team_5k.webp").default}
           filter={true}
           style={{ maxHeight: "100px" }}
         >
@@ -40,7 +31,7 @@ export default function TeamPage(props) {
               <GridItem>
                 <div className={classes.brand} style={{ paddingTop: 40 }}>
                   <h1 className={classes.title}>
-                    Team.
+                      { pageName.charAt(0).toUpperCase() + pageName.slice(1)}
                   </h1>
                 </div>
               </GridItem>

@@ -1,7 +1,7 @@
 import * as React from "react";
-import Parallax from "../components/partial_components/Parallax/Parallax.js";
-import GridContainer from "../components/partial_components/Grid/GridContainer.js";
-import GridItem from "../components/partial_components/Grid/GridItem.js";
+// import Parallax from "../components/partial_components/Parallax/Parallax.js";
+// import GridContainer from "../components/partial_components/Grid/GridContainer.js";
+// import GridItem from "../components/partial_components/Grid/GridItem.js";
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "../material_style/components.js";
@@ -21,23 +21,23 @@ export default function TeamPage(props) {
                 title={pageName.charAt(0).toUpperCase() + pageName.slice(1)}
                 article
             />
-            <Parallax
-                image={require("../images/research2.webp").default}
-                filter={true}
-                style={{ maxHeight: "100px" }}
-            >
-                <div className={classes.container}>
-                    <GridContainer>
-                        <GridItem>
-                            <div className={classes.brand} style={{ paddingTop: 40 }}>
-                                <h1 className={classes.title}>
-                                    { pageName.charAt(0).toUpperCase() + pageName.slice(1)}
-                                </h1>
-                            </div>
-                        </GridItem>
-                    </GridContainer>
-                </div>
-            </Parallax>
+            {/*<Parallax*/}
+            {/*    image={require("../images/research2.webp").default}*/}
+            {/*    filter={true}*/}
+            {/*    style={{ maxHeight: "100px" }}*/}
+            {/*>*/}
+            {/*    <div className={classes.container}>*/}
+            {/*        <GridContainer>*/}
+            {/*            <GridItem>*/}
+            {/*                <div className={classes.brand} style={{ paddingTop: 40 }}>*/}
+            {/*                    <h1 className={classes.title}>*/}
+            {/*                        { pageName.charAt(0).toUpperCase() + pageName.slice(1)}*/}
+            {/*                    </h1>*/}
+            {/*                </div>*/}
+            {/*            </GridItem>*/}
+            {/*        </GridContainer>*/}
+            {/*    </div>*/}
+            {/*</Parallax>*/}
             <div className={classNames(classes.main)}>
                 <Research />
             </div>

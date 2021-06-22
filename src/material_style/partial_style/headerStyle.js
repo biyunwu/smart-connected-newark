@@ -22,8 +22,10 @@ const headerStyle = {
     color: "#555",
     width: "100%",
     backgroundColor: "#fff",
-    boxShadow:
-      "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)",
+    // boxShadow:
+    //   "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)",
+    boxShadow: "none",
+    borderBottom: "1px solid rgba(60, 72, 88, 0.5)",
     transition: "all 150ms ease 0s",
     alignItems: "center",
     flexFlow: "row nowrap",
@@ -106,12 +108,12 @@ const headerStyle = {
     boxShadow:
       "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(233, 30, 99, 0.46)",
   },
-  transparent: {
-    backgroundColor: "transparent !important",
-    boxShadow: "none",
-    paddingTop: "25px",
-    color: "#FFFFFF",
-  },
+  // transparent: {
+  //   backgroundColor: "transparent !important",
+  //   boxShadow: "none",
+  //   paddingTop: "25px",
+  //   color: "#FFFFFF",
+  // },
   dark: {
     color: "#FFFFFF",
     backgroundColor: "#212121 !important",

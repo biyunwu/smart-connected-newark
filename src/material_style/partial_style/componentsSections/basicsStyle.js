@@ -2,12 +2,35 @@ import { container, title } from "../../material-kit-react.js";
 import customCheckboxRadioSwitch from "../customCheckboxRadioSwitch.js";
 
 const basicsStyle = {
+  pageTitle: {
+    textAlign: "center",
+    fontWeight: "700",
+    color: "rgb(60, 72, 88)",
+    marginTop: "2em",
+  },
   markdownStyle: {
     // '& > p, & > ul > li > p ': {
     //   fontSize: "1em",
     // },
     '& p ': {
       fontSize: "1em",
+    },
+    "& span": {
+      fontSize: "14px",
+    },
+    "& h5": {
+      fontSize: "20px",
+      fontWeight: "400",
+    },
+    "& *": {
+      fontWeight: "400",
+    }
+  },
+  inlineMarkdownStyle: {
+    '& p ': {
+      fontSize: "1em",
+      display: "inline",
+      paddingLeft: "0.5em",
     },
     "& span": {
       fontSize: "14px",

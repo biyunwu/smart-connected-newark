@@ -73,7 +73,7 @@ export default function Header(props) {
             marginRight: 10,
           }}
         />
-        {brand}
+        <span style={{ fontSize: "16px" }}>{brand}</span>
       </div>
     </Button>
   );

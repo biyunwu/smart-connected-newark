@@ -63,6 +63,9 @@ export default function Team() {
       className={classes.sections}
       style={{ paddingTop: "0.5em", fontWeight: 400, minHeight: "60vh"}}
     >
+      <div className={classes.container}>
+        <h1 className={classes.pageTitle}>Team</h1>
+      </div>
       {teamData.map(organizationObj =>
         <div className={[classes.container, customClasses.instituteContainer].join(" ")} key={organizationObj.organization}>
           <h2 style={{ borderBottom: "rgb(154, 154, 154) 1px solid", marginBottom: "30px" }}>{organizationObj.organization}</h2>

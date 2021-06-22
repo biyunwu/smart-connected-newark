@@ -23,8 +23,11 @@ export default function Impact() {
     return (
         <div
             className={classes.sections}
-            style={{ paddingTop: "0.5em", fontWeight: 400 }}
+            style={{ paddingTop: "0.5em", fontWeight: 400, minHeight: "90vh" }}
         >
+            <div className={classes.container}>
+                <h1 className={classes.pageTitle}>Impact</h1>
+            </div>
             {
                 impactData.map(impactObj =>
                     <div className={classes.container} key={impactObj.sectionTitle} style={{ maxWidth: "50em" }}>

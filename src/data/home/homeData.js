@@ -1,11 +1,13 @@
 export const homeData = {
     title: `Harmony: Empowering Newark Residents with Smart and Inclusive Service Integration`,
+    // markdown
     intro: `
 ##### Smart city services are deeply embedded in modern cities aiming to enhance various aspects of citizens&apos; lives. However, underlying expected or unexpected couplings among services due to complex interactions of social and physical activities are under-explored, which lead to potential conflicts. Using City of Newark in New Jersey as a testbed, this project aims to develop ways of reducing conflicts for ensuring social inclusion and equity of city services to achieve a "harmony" among various services.
 `,
     updates: [
         {
         time: "11/20/2020",
+        // markdown
         content:
             "Our project team met with Newark Chief Operating Officer Natasha Rogers.",
         },
@@ -41,6 +43,7 @@ export const homeData = {
         "Potential Transferability to Other Cities",
         "Part of NSF Smart and Connected Community Program",
     ],
+    // markdown
     objective: `
 Develop a socially-aware conflict management theory called Harmony for City Service Integration with five components:
 
@@ -55,7 +58,7 @@ Develop a socially-aware conflict management theory called Harmony for City Serv
 * Social Intervention for Tech Dissemination and Edu Outreach.
   
 Implement Harmony by working with our partners in City of Newark, NJ.`,
-
+    // markdown
     innovation: `
 Grounded in social science where new insights were drawn from social data collection to build a consensus on service conflicts.
 

@@ -13,6 +13,7 @@ const headerLinksStyle = (theme) => ({
     paddingBottom: "0",
     color: "inherit",
     display: "inline-block",
+    verticalAlign: "middle",
   },
   listItem: {
     float: "left",
@@ -40,14 +41,14 @@ const headerLinksStyle = (theme) => ({
   navLink: {
     color: "inherit",
     position: "relative",
-    padding: "0.8rem",
+    padding: "0.45rem",
     fontWeight: "400",
     fontSize: "1em",
     textTransform: "uppercase",
     borderRadius: "3px",
     lineHeight: "20px",
     textDecoration: "none",
-    margin: "0px",
+    margin: "0",
     display: "inline-flex",
     // "&::before": {
     //   display: "block",

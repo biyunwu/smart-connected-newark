@@ -6,7 +6,7 @@ import Footer from "./Footer/Footer.js";
 const Layout = (props) =>
     <div id="main-content" style={{ minHeight: "100vh" }}>
         <Header
-            brand="Smart & Connected"
+            brand="Smart & Connected Newark"
             rightLinks={<HeaderLinks />}
             fixed
             color="transparent"

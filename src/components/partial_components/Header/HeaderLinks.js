@@ -25,7 +25,7 @@ const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
   const classes = useStyles();
-  const pageName = props.pageName;
+  // const pageName = props.pageName;
   return (
     <List className={classes.list}>
       {/*<ListItem className={classes.listItem}>*/}

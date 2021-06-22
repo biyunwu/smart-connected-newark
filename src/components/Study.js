@@ -28,6 +28,9 @@ export default function Study() {
             className={classes.sections}
             style={{ paddingTop: "0.5em", fontWeight: 400 }}
         >
+            <div className={classes.container}>
+                <h1 className={classes.pageTitle}>Study</h1>
+            </div>
             {
                 studyData.map(studyObj =>
                     <div className={classes.container} key={studyObj.study_title}>

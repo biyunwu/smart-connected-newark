@@ -4,9 +4,9 @@ const [breakpointExtraSmall, breakpointSmall, breakpointMiddle] = [320, 420, 768
 
 const getFontSize = (width) =>
     width > breakpointMiddle
-        ? "4em"
-        : width > breakpointSmall
         ? "3em"
+        : width > breakpointSmall
+        ? "2.5em"
         : width > breakpointExtraSmall
             ? "2em"
             : "1.5em"
@@ -42,7 +42,7 @@ class LongTitle extends React.Component{
         const {isBrowserReady, viewportWidth} = this.state
         return ( isBrowserReady &&
             <h1 className={className}
-                style={{ fontSize: getFontSize(viewportWidth) }}
+                style={{ fontSize: getFontSize(viewportWidth), fontWeight: "700", margin: "0" }}
             >
                 {title}
             </h1>

@@ -1,35 +1,21 @@
 module.exports = {
-  pathPrefix: `/~dz220/deployment-test`,
+  pathPrefix: `/~dz220/smart_connected_newark`,
   siteMetadata: {
     title: "Smart and Connected Newark Project",
     titleTemplate: "%s · Smart and Connected Newark Project",
     description: "A National Science Foundation project. Smart city services are deeply embedded in modern cities aiming to enhance various aspects of citizens’ lives. However, underlying expected or unexpected couplings among services due to complex interactions of social and physical activities are under-explored, which lead to potential conflicts. Using City of Newark in New Jersey as a testbed, this project aims to develop ways of reducing conflicts for ensuring social inclusion and equity of city services to achieve a “harmony “ among various city services.",
-    siteUrl: `https://www.example.com`,
+    siteUrl: `https://www.cs.rutgers.edu/~dz220/smart_connected_newark`,
     image: "/icon.png",
   },
   plugins: [
     `gatsby-plugin-sass`,
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "123",
-      },
-    },
+    `gatsby-plugin-remove-trailing-slashes`,
     // {
-    //   resolve: `gatsby-plugin-sharp`,
+    //   resolve: "gatsby-plugin-google-analytics",
     //   options: {
-    //     // Defaults used for gatsbyImageData and StaticImage
-    //     defaults: {},
-    //     // Set to false to allow builds to continue on image errors
-    //     failOnError: true,
-    //     // deprecated options and their defaults:
-    //     base64Width: 20,
-    //     forceBase64Format: `webp`, // valid formats: png,jpg,webp
-    //     useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
-    //     stripMetadata: true,
-    //     defaultQuality: 50,
+    //     trackingId: "123",
     //   },
     // },
     {

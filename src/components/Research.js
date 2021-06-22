@@ -4,6 +4,7 @@ import styles from "../material_style/partial_style/componentsSections/basicsSty
 import {researchInfo} from "../data/research/researchInfo.js";
 import ReactMarkdown from 'react-markdown'
 import { Divider} from "@material-ui/core";
+import { withPrefix } from 'gatsby';
 
 const useStyles = makeStyles(styles);
 
@@ -22,8 +23,9 @@ export default function Research() {
     return (
         <div
             className={classes.sections}
-            style={{ paddingTop: "0.5em", fontWeight: 400 }}
+            style={{ paddingTop: "0.5em", fontWeight: 400, minHeight: "90vh" }}
         >
+            <div className={classes.container}><h1 className={classes.pageTitle}>Research</h1></div>
             {
                 researchInfo.map(researchObj =>
                     <div className={classes.container} key={researchObj.title} style={{maxWidth: "50em", minHeight: "60vh"}}>
@@ -32,7 +34,7 @@ export default function Research() {
                         <div className={customClasses.markdownStyle}>
                             <ReactMarkdown children={researchObj.content} linkTatget="_blank" sourcePos={true}/>
                         </div>
-                        <img src={researchObj.image} alt={researchObj.title} style={{ maxWidth: "min(100%, 50em)"}} />
+                        <img src={withPrefix(researchObj.image)} alt={researchObj.title} style={{ maxWidth: "min(100%, 50em)"}} />
                     </div>
                 )
             }

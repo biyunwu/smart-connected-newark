@@ -67,6 +67,35 @@ Materialized with a set of socially-informed technological merits for conflict s
 Evaluated with both technological and social experiments.
 
 Societal impacts are created through social interventions to inclusively and equitably benefit diverse stakeholders of service conflicts.`,
+    videoHtml: // markdown and html
+`<iframe width="100%" 
+    height="100%" 
+    src="https://www.youtube-nocookie.com/embed/ryHSMTRY2wM"
+    title="YouTube video player" 
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+/>
+`,
+    imageDirectory: `/homepage_slideshow/`, // parent folder of images in `static` folder
+    imageObjects: [
+        {
+            fileName: `slideshow1.webp`,
+            desc: `Image description`,
+        },
+        {
+            fileName: `slideshow2.webp`,
+            desc: `ICCPS 2021 Best Paper Award`,
+        },
+        {
+            fileName: `slideshow3.webp`,
+            desc: `Image description`,
+        },
+        {
+            fileName: `slideshow4.webp`,
+            desc: `Image description`,
+        },
+    ],
     collaborators: {
         image_directory: "/collaborators/", // path in `static` folder of the project
         collaborator_list: [

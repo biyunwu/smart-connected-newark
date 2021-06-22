@@ -1,18 +1,16 @@
 import React from "react";
-// material-ui components
 import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from "./partial_components/Grid/GridContainer";
 import GridItem from "./partial_components/Grid/GridItem.js";
 import Badge from "./partial_components/Badge/Badge.js";
-import Pagination from '@material-ui/lab/Pagination';
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from 'rehype-raw'
 import { homeData } from "../data/home/homeData";
 import styles from "../material_style/partial_style/componentsSections/basicsStyle.js";
 import { withPrefix } from "gatsby";
 import LongTitle from "./partial_components/LongTitle";
 import {Divider} from "@material-ui/core";
 import Slideshow from "../components/partial_components/Slideshow"
-// import Button from '@material-ui/core/Button';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
@@ -20,14 +18,13 @@ const useStyles = makeStyles(styles);
 
 export default function Home() {
   const classes = useStyles();
-  // For pagination control in `Updates`
   const [readMore, setReadMore] = React.useState(false);
   const handleChange = (event) => {
     setReadMore(! readMore);
   };
   const initialItems = 4
 
-  const backgroundImage = require("../images/Newark_Penn_Station_June_2015_001.jpg").default
+  const backgroundImage = require("../images/Newark_Penn_Station_June_2015_001.webp").default
   const backgroundStyle = {
     marginTop: "4em",
     background: `url(${backgroundImage})`,
@@ -39,7 +36,7 @@ export default function Home() {
   }
 
     const cardStyle = {
-        background: "linear-gradient(to top, transparent, rgba(0, 0, 0, 0.6)",
+        background: "linear-gradient(to top, transparent, rgba(0, 0, 0, 0.6))",
         backdropFilter: "blur(3px)",
         margin: "1em auto",
         // padding: "1em",
@@ -78,7 +75,6 @@ export default function Home() {
               <GridItem container spacing={0}>
                 <GridItem item xs={12} sm={6} md={4}>
                   <div
-                      // className={classes.container}
                       style={cardStyle}
                   >
                     <h2 style={{textAlign: "center", background: "rgba(255, 0, 0, 0.6)", margin: "0 0 0.5em 0"}}>Highlights</h2>
@@ -91,7 +87,6 @@ export default function Home() {
                 </GridItem>
                 <GridItem container item xs={12} sm={6} md={4}>
                   <div
-                      // className={classes.container}
                       style={cardStyle}
                   >
                     <h2 style={{textAlign: "center", background: "rgba(0, 255, 0, 0.6)", margin: "0 0 0.5em 0"}}>Objective</h2>
@@ -102,7 +97,6 @@ export default function Home() {
                 </GridItem>
                 <GridItem container item xs={12} sm={6} md={4}>
                   <div
-                      // className={classes.container}
                       style={cardStyle}
                   >
                     <h2 style={{textAlign: "center", background: "rgba(0, 0, 255, 0.6)", margin: "0 0 0.5em 0"}}>Innovation</h2>
@@ -122,25 +116,6 @@ export default function Home() {
         style={{ paddingTop: 20, fontWeight: 400, minHeight: "60vh"}}
       >
         <div className={classes.container}>
-          {/*<div style={{ margin: "1em 0" }} className={classes.markdownStyle}>*/}
-          {/*  <ReactMarkdown children={homeData.intro}/>*/}
-          {/*</div>*/}
-          {/*<GridContainer>*/}
-          {/*  <GridItem container spacing={1}>*/}
-          {/*    <GridItem container item xs={12} sm={12} md={6}>*/}
-          {/*      <img src={mayor} alt="diagram" style={{ width: "100%" }} />*/}
-          {/*    </GridItem>*/}
-          {/*    <GridItem container item xs={12} sm={12} md={6}>*/}
-          {/*      <img*/}
-          {/*        src={newark}*/}
-          {/*        alt="google map of newark city"*/}
-          {/*        style={{ width: "100%"}}*/}
-          {/*      />*/}
-          {/*    </GridItem>*/}
-          {/*  </GridItem>*/}
-          {/*</GridContainer>*/}
-          {/*<hr />*/}
-
           <GridContainer>
             <GridItem container spacing={2}>
               <GridItem container item xs={12}>
@@ -152,16 +127,7 @@ export default function Home() {
                   }}
                 >
                   <div>
-                    <h2>
-                      News
-                      {/*<Pagination count={Math.ceil(homeData.updates.length / itemsPerPage)}*/}
-                      {/*            page={page}*/}
-                      {/*            onChange={handleChange}*/}
-                      {/*            variant="outlined"*/}
-                      {/*            color="primary"*/}
-                      {/*            style={{marginBottom: "15px", float: "right"}}*/}
-                      {/*/>*/}
-                    </h2>
+                    <h2>News</h2>
                     <Divider/>
                     <div style={{paddingTop: "1em"}}>
                       {homeData.updates.map((data, idx) =>
@@ -192,63 +158,10 @@ export default function Home() {
                             {!readMore && <ChevronRightIcon/>}
                         </button>
                       </div>
-
-                      {/*<Pagination count={Math.ceil(homeData.updates.length / itemsPerPage)}*/}
-                      {/*            page={page}*/}
-                      {/*            onChange={handleChange}*/}
-                      {/*            variant="outlined"*/}
-                      {/*            color="primary"*/}
-                      {/*            style={{marginBottom: "15px"}}*/}
-                      {/*/>*/}
                     </div>
                   </div>
                 </div>
               </GridItem>
-              {/*<GridItem container item xs={12} sm={12} md={6}>*/}
-              {/*  <div*/}
-              {/*    className={classes.container}*/}
-              {/*    style={{*/}
-              {/*      borderBottom: "1px solid rgb(154, 154, 154)",*/}
-              {/*      padding: "0",*/}
-              {/*    }}*/}
-              {/*  >*/}
-              {/*    <h2>Highlights</h2>*/}
-              {/*    <div className={classes.markdownStyle}>*/}
-              {/*      {homeData.highlights.map((item, key) => (*/}
-              {/*          <ReactMarkdown key={key} children={item} linkTarget="_blank"/>*/}
-              {/*      ))}*/}
-              {/*    </div>*/}
-              {/*  </div>*/}
-              {/*</GridItem>*/}
-
-              {/*<GridItem container xs={12} sm={12} md={6}>*/}
-              {/*  <div*/}
-              {/*      className={classes.container}*/}
-              {/*      style={{*/}
-              {/*        borderBottom: "1px solid rgb(154, 154, 154)",*/}
-              {/*        padding: "0",*/}
-              {/*      }}*/}
-              {/*  >*/}
-              {/*    <h2>Objective</h2>*/}
-              {/*    <div className={classes.markdownStyle}>*/}
-              {/*      <ReactMarkdown children={homeData.objective} linkTarget="_blank"/>*/}
-              {/*    </div>*/}
-              {/*  </div>*/}
-              {/*</GridItem>*/}
-              {/*<GridItem container xs={12} sm={12} md={6}>*/}
-              {/*  <div*/}
-              {/*      style={{*/}
-              {/*        borderBottom: "1px solid rgb(154, 154, 154)",*/}
-              {/*        padding: "0",*/}
-              {/*      }}*/}
-              {/*  >*/}
-              {/*    <h2>Innovation</h2>*/}
-              {/*    <div className={classes.markdownStyle}>*/}
-              {/*      <ReactMarkdown children={homeData.innovation} linkTarget="_blank"/>*/}
-              {/*    </div>*/}
-              {/*  </div>*/}
-              {/*</GridItem>*/}
-
             </GridItem>
           </GridContainer>
 
@@ -259,19 +172,15 @@ export default function Home() {
             <GridItem container spacing={1}>
               <GridItem container item sm={12} md={6}>
                 <div style={{height: "100%", width: "100%", minHeight: "300px", border: "1px rgb(238, 238, 238) solid"}}>
-                  <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/ryHSMTRY2wM"
-                          title="YouTube video player" frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
+                  <ReactMarkdown
+                      rehypePlugins={[rehypeRaw]}
+                      children={homeData.videoHtml}
+                      linkTarget="_blank"
+                      sourcePos={true}
                   />
                 </div>
               </GridItem>
               <GridItem container item sm={12} md={6}>
-                {/*<img*/}
-                {/*    src={newark}*/}
-                {/*    alt="google map of newark city"*/}
-                {/*    style={{ width: "100%"}}*/}
-                {/*/>*/}
                 <div style={{height: "100%", width: "100%", border: "1px rgb(238, 238, 238) solid "}}>
                   <Slideshow/>
                 </div>

@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { withPrefix } from "gatsby";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import {homeData} from "../../data/home/homeData";
 
 class Slideshow extends Component {
     render() {
+        const baseDirectory = homeData.imageDirectory
+        const imgObjs = homeData.imageObjects
         return (
             <Carousel
                 dynamicHeight={false}
@@ -16,22 +20,13 @@ class Slideshow extends Component {
                 emulateTouch={true}
                 // swipeable={true}
             >
-                <div>
-                    <img src="/homepage_slideshow/slideshow1.webp" />
-                    <p className="legend">Image description</p>
-                </div>
-                <div>
-                    <img src="/homepage_slideshow/slideshow2.png" alt={"Best Paper Award"}/>
-                    <p className="legend">ICCPS 2021 Best Paper Award</p>
-                </div>
-                <div>
-                    <img src="/homepage_slideshow/slideshow3.png" />
-                    <p className="legend">Image description</p>
-                </div>
-                <div>
-                    <img src="/homepage_slideshow/slideshow4.png" />
-                    <p className="legend">Image description</p>
-                </div>
+                {imgObjs.map((imgObj, idx) =>
+                    <div key={imgObj.desc} style={{width: "100%", height: "100%", objectFit: "cover"}}>
+                        {/*<img src="/homepage_slideshow/slideshow1.webp" />*/}
+                        <img src={withPrefix(baseDirectory + imgObj.fileName)} alt={imgObj.desc} style={{height: "100%"}}/>
+                        <p className="legend">{imgObj.desc}</p>
+                    </div>
+                )}
             </Carousel>
         );
     }

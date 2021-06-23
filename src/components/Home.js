@@ -37,7 +37,7 @@ class HomeComponent extends React.Component{
     )
   }
 
-  handleChange = (event) => {
+  handleChange = () => {
     this.setState(prevState => ({
       readMore: ! prevState.readMore
     }));
@@ -98,7 +98,8 @@ class HomeComponent extends React.Component{
                 : "1.5em"
 
     return (
-        isBrowserReady &&
+        isBrowserReady
+        ?
         <>
           <div style={backgroundStyle}>
             <div style={{margin: "4em auto 0 auto"}}>
@@ -296,6 +297,8 @@ class HomeComponent extends React.Component{
             </div>
           </div>
         </>
+        :
+        <div style={{minHeight: "100vh"}}/>
     );
   }
 }

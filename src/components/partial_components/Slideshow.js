@@ -24,7 +24,7 @@ class Slideshow extends Component {
                     <div key={imgObj.desc} style={{width: "100%", height: "100%", objectFit: "cover"}}>
                         {/*<img src="/homepage_slideshow/slideshow1.webp" />*/}
                         <img src={withPrefix(baseDirectory + imgObj.fileName)} alt={imgObj.desc} style={{height: "100%"}}/>
-                        <p className="legend">{imgObj.desc}</p>
+                        <p className="legend" style={{fontSize: "16px", borderRadius: "0"}}>{imgObj.desc}</p>
                     </div>
                 )}
             </Carousel>

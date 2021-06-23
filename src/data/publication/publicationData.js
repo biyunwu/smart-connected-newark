@@ -1,12 +1,18 @@
 export const publicationData = [
     {
         year: 2021,
-        articles:
+        articles: // markdown or html
 `* #### DeResolver: A Decentralized Negotiation and Conflict Resolution Framework for Smart City Services
             
     Yukun Yuan, Meiyi Ma, Songyang Han, Desheng Zhang, Fei Miao, John A. Stankovic and Shan Lin 
     
     *International Conference on Cyber-Physical Systems (ICCPS) 2021* <span style="color: red; font-size: 16px">[Best Paper Award]</span>
+    
+    <img 
+        src="https://raw.githubusercontent.com/biyunwu/smart-connected-newark/main/static/homepage_slideshow/slideshow2.webp" 
+        alt="Best Paper Award" 
+        style="width:100%; max-width: 600px;"
+    />
 `,
     },
     {

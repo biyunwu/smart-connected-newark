@@ -6,7 +6,7 @@ const basicsStyle = {
     textAlign: "center",
     fontWeight: "700",
     color: "rgb(60, 72, 88)",
-    marginTop: "2em",
+    marginTop: "1.8em",
   },
   markdownStyle: {
     // '& > p, & > ul > li > p ': {

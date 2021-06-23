@@ -81,19 +81,19 @@ Societal impacts are created through social interventions to inclusively and equ
     imageObjects: [
         {
             fileName: `slideshow1.webp`,
-            desc: `Image description`,
+            desc: `City Services`,
         },
         {
             fileName: `slideshow2.webp`,
-            desc: `ICCPS 2021 Best Paper Award`,
+            desc: `ICCPS’21 Best Paper`,
         },
         {
             fileName: `slideshow3.webp`,
-            desc: `Image description`,
+            desc: `Team Visiting City of Newark`,
         },
         {
             fileName: `slideshow4.webp`,
-            desc: `Image description`,
+            desc: `Meeting with City of Newark`,
         },
     ],
     collaborators: {

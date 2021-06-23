@@ -26,11 +26,6 @@ export default function Licenses() {
                 </div>
                 <Divider/>
                 <div style={{margin: "2em 0"}}>
-                    <h3>Image License</h3>
-                    <p>Background images by <a href='https://www.freepik.com' target='_blank' rel="noreferrer">Freepik</a>.</p>
-                </div>
-                <Divider/>
-                <div style={{margin: "2em 0"}}>
                     <h3>Developer</h3>
                     <h4>Biyun Wu</h4>
                     <ul>

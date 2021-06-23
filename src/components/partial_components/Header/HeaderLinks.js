@@ -55,7 +55,7 @@ export default function HeaderLinks(props) {
             <ListItem className={classes.listItem} key={name}>
               <Link to={name === siteInfo.pageNames[0] ? "/" : "/" + name}
                     className={classes.listItem}
-                    activeStyle={{ textDecoration: "underline" }}
+                    activeStyle={{ textDecoration: "underline", color: "black" }}
               >
                 <Button
                     // href={name === siteInfo.pageNames[0] ? siteInfo.domain : siteInfo.domain + name}

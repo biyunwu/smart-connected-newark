@@ -19,13 +19,14 @@ export default function Publication() {
         >
             <div className={classes.container}>
                 <h1 className={classes.pageTitle}>Publication</h1>
+                <Divider/>
             </div>
             <div className={classes.container}>
                 {publicationData.map((articlesByYear, idx) => (
                     <React.Fragment key={articlesByYear.year}>
                         <GridContainer>
                             <GridItem container spacing={0}>
-                                <GridItem item md={2} style={{margin: "auto"}}>
+                                <GridItem item md={2} style={{margin: "0 auto"}}>
                                     <h2>{ articlesByYear.year }</h2>
                                 </GridItem>
                                 <GridItem item md={10} style={{padding: 0}}>

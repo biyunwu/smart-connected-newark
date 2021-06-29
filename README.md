@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://smartcities.rutgers.edu">
-    <img alt="Smart and Connected Newark Project" src="https://smartcities.rutgers.edu/static/logo-3dc96eb6fbd58d0f888b34625ffc9dfd.gif" width="60" />
+    <img alt="Smart and Connected Newark Project" src="https://raw.githubusercontent.com/biyunwu/smart-connected-newark/main/src/images/logo.gif" width="60" />
   </a>
 </p>
 <div align="center">

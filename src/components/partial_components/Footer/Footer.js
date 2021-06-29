@@ -60,10 +60,10 @@ export default function Footer(props) {
             {/*</ListItem>*/}
             <ListItem className={classes.inlineBlock}>
               <Link
-                to="/licenses"
+                to="/credits"
                 className={classes.block}
               >
-                Licenses
+                Credits
               </Link>
             </ListItem>
           </List>

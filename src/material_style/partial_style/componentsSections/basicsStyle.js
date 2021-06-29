@@ -8,6 +8,12 @@ const basicsStyle = {
     color: "rgb(60, 72, 88)",
     marginTop: "1.8em",
   },
+
+  firstContainer : {
+    padding: "0",
+    marginTop: "7em",
+    // ...container,
+  },
   markdownStyle: {
     // '& > p, & > ul > li > p ': {
     //   fontSize: "1em",

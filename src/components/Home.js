@@ -62,7 +62,7 @@ class HomeComponent extends React.Component{
 
   render() {
     const classes = this.props.classes;
-    const initialItems = 4
+    const initialNewsItems = 5
     const backgroundImage = require("../images/Newark_Penn_Station_June_2015_001.webp").default
     const backgroundStyle = {
       marginTop: "4em",
@@ -71,6 +71,7 @@ class HomeComponent extends React.Component{
       // background: `url(${backgroundImage})`,
       width: "100%",
       height: "100%",
+      minHeight: "953px",
       backgroundPosition: "center center",
       backgroundSize: "cover",
       padding: "1em"
@@ -80,7 +81,7 @@ class HomeComponent extends React.Component{
       backdropFilter: "blur(3px)",
       margin: "1em auto",
       // padding: "1em",
-      maxWidth: "500px",
+      maxWidth: "685px",
       color: "white",
     }
 
@@ -98,95 +99,93 @@ class HomeComponent extends React.Component{
                 : "1.5em"
 
     return (
-        isBrowserReady
-        ?
+        // isBrowserReady
+        // ?
         <>
           <div style={backgroundStyle}>
-            <div style={{margin: "4em auto 0 auto"}}>
-              <div className={classes.container}
-                   style={{
-                     color: "white",
-                     padding: "1em",
-                     // background: "rgba(0, 0, 0, 0.2)",
-                     // backdropFilter: "blur(1.5px)",
-                     // borderLeft: "10px solid rgba(255, 255, 0, 0.6)",
-                     // border: "1px solid rgba(255, 255, 255, 0.6)",
-                   }}
-              >
-                {/*<LongTitle*/}
-                {/*    title={"Harmony: Empowering Newark Residents with Smart and Inclusive Service Integration"}*/}
-                {/*/>*/}
-                <h1 style={{ fontSize: getFontSize(viewportWidth), fontWeight: "700", margin: "0" }}>
-                  "Harmony: Empowering Newark Residents with Smart and Inclusive Service Integration"
-                </h1>
-                <div style={{
-                  margin: "1em 0",
-                  padding: "0.5em 1em",
-                  background: "rgba(0, 0, 0, 0.2)",
-                  backdropFilter: "blur(3px)"
-                }}
-                     className={classes.markdownStyle}
+            {/*isBrowserReady &&*/}
+              <div style={{margin: "3em auto 0 auto", visibility: isBrowserReady? "visible" : "hidden" }}>
+                <div className={classes.container}
+                     style={{
+                       color: "white",
+                       padding: "1em",
+                       // background: "rgba(0, 0, 0, 0.2)",
+                       // backdropFilter: "blur(1.5px)",
+                       // borderLeft: "10px solid rgba(255, 255, 0, 0.6)",
+                       // border: "1px solid rgba(255, 255, 255, 0.6)",
+                     }}
                 >
-                  <ReactMarkdown children={homeData.intro}/>
+                  <h1 style={{ fontSize: getFontSize(viewportWidth), fontWeight: "700", margin: "0" }}>
+                    {homeData.title}
+                  </h1>
+                  <div style={{
+                    margin: "1em 0",
+                    padding: "0.25em 1em",
+                    background: "rgba(0, 0, 0, 0.2)",
+                    backdropFilter: "blur(3px)"
+                  }}
+                       className={classes.markdownStyle}
+                  >
+                    <ReactMarkdown children={homeData.intro}/>
+                  </div>
+                </div>
+                <div style={{background: "none", margin: "2em auto", maxWidth: "1700px"}}>
+                  <GridContainer>
+                    <GridItem container spacing={0}>
+                      <GridItem item sm={12} md={6} lg={4}>
+                        <div
+                            style={cardStyle}
+                        >
+                          <h3 style={{
+                            fontWeight: "400",
+                            textAlign: "center",
+                            background: "rgba(255, 0, 0, 0.6)",
+                            margin: "0",
+                            padding: "0.25em 0"
+                          }}>Highlights</h3>
+                          <div className={classes.markdownStyle} style={{padding: "1em"}}>
+                            {homeData.highlights.map((item, key) => (
+                                <ReactMarkdown key={key} children={item} linkTarget="_blank"/>
+                            ))}
+                          </div>
+                        </div>
+                      </GridItem>
+                      <GridItem container item sm={12} md={6} lg={4}>
+                        <div
+                            style={cardStyle}
+                        >
+                          <h3 style={{
+                            fontWeight: "400",
+                            textAlign: "center",
+                            background: "rgba(0, 255, 0, 0.6)",
+                            margin: "0",
+                            padding: "0.25em 0"
+                          }}>Objective</h3>
+                          <div className={classes.markdownStyle} style={{padding: "1em"}}>
+                            <ReactMarkdown children={homeData.objective} linkTarget="_blank"/>
+                          </div>
+                        </div>
+                      </GridItem>
+                      <GridItem container item sm={12} md={6} lg={4}>
+                        <div
+                            style={cardStyle}
+                        >
+                          <h3 style={{
+                            fontWeight: "400",
+                            textAlign: "center",
+                            background: "rgba(0, 0, 255, 0.6)",
+                            margin: "0",
+                            padding: "0.25em 0"
+                          }}>Innovation</h3>
+                          <div className={classes.markdownStyle} style={{padding: "1em"}}>
+                            <ReactMarkdown children={homeData.innovation} linkTarget="_blank"/>
+                          </div>
+                        </div>
+                      </GridItem>
+                    </GridItem>
+                  </GridContainer>
                 </div>
               </div>
-              <div style={{background: "none", margin: "2em auto", maxWidth: "1700px"}}>
-                <GridContainer>
-                  <GridItem container spacing={0}>
-                    <GridItem item xs={12} sm={6} md={4}>
-                      <div
-                          style={cardStyle}
-                      >
-                        <h3 style={{
-                          fontWeight: "400",
-                          textAlign: "center",
-                          background: "rgba(255, 0, 0, 0.6)",
-                          margin: "0",
-                          padding: "0.5em 0"
-                        }}>Highlights</h3>
-                        <div className={classes.markdownStyle} style={{padding: "1em"}}>
-                          {homeData.highlights.map((item, key) => (
-                              <ReactMarkdown key={key} children={item} linkTarget="_blank"/>
-                          ))}
-                        </div>
-                      </div>
-                    </GridItem>
-                    <GridItem container item xs={12} sm={6} md={4}>
-                      <div
-                          style={cardStyle}
-                      >
-                        <h3 style={{
-                          fontWeight: "400",
-                          textAlign: "center",
-                          background: "rgba(0, 255, 0, 0.6)",
-                          margin: "0",
-                          padding: "0.5em 0"
-                        }}>Objective</h3>
-                        <div className={classes.markdownStyle} style={{padding: "1em"}}>
-                          <ReactMarkdown children={homeData.objective} linkTarget="_blank"/>
-                        </div>
-                      </div>
-                    </GridItem>
-                    <GridItem container item xs={12} sm={6} md={4}>
-                      <div
-                          style={cardStyle}
-                      >
-                        <h3 style={{
-                          fontWeight: "400",
-                          textAlign: "center",
-                          background: "rgba(0, 0, 255, 0.6)",
-                          margin: "0",
-                          padding: "0.5em 0"
-                        }}>Innovation</h3>
-                        <div className={classes.markdownStyle} style={{padding: "1em"}}>
-                          <ReactMarkdown children={homeData.innovation} linkTarget="_blank"/>
-                        </div>
-                      </div>
-                    </GridItem>
-                  </GridItem>
-                </GridContainer>
-              </div>
-            </div>
           </div>
 
           <div
@@ -209,7 +208,7 @@ class HomeComponent extends React.Component{
                         <Divider/>
                         <div style={{paddingTop: "1em"}}>
                           {homeData.updates.map((data, idx) =>
-                              (idx < initialItems || readMore)
+                              (idx < initialNewsItems || readMore)
                               &&
                               <div key={idx} className={classes.inlineMarkdownStyle} style={{padding: "5px 0"}}>
                                 <Badge color="info">{data.time + "  "}</Badge>
@@ -282,7 +281,7 @@ class HomeComponent extends React.Component{
                 <GridItem container spacing={5}>
                   {
                     homeData.collaborators.collaborator_list.map(collaborator =>
-                        <GridItem container item xs={4} sm={3} md={2} key={collaborator.name}>
+                        <GridItem container item xs={4} sm={3} md={2} key={collaborator.name} >
                           <a href={collaborator.url} target="_blank" rel="noreferrer">
                             <img
                                 src={withPrefix(homeData.collaborators.image_directory + collaborator.icon_filename)}
@@ -297,8 +296,8 @@ class HomeComponent extends React.Component{
             </div>
           </div>
         </>
-        :
-        <div style={{minHeight: "100vh"}}/>
+        // :
+        // <div style={{minHeight: "100vh"}}/>
     );
   }
 }

@@ -120,7 +120,7 @@ export default function IndexPage(props){
     //     }
         return (
             <Layout>
-                <Seo title="Home"/>
+                <Seo title="Smart Cities"/>
                 {/*<Parallax*/}
                 {/*  image={require("../images/smart_city2.webp").default}*/}
                 {/*  filter={true}*/}

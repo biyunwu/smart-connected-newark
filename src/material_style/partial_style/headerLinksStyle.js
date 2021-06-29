@@ -50,14 +50,14 @@ const headerLinksStyle = (theme) => ({
     textDecoration: "none",
     margin: "0",
     display: "inline-flex",
-    // "&::before": {
-    //   display: "block",
-    //   content: "attr(title)",
-    //   fontWeight: "600",
-    //   height: 0,
-    //   overflow: "hidden",
-    //   visibility: "hidden",
-    // },
+    "&::after": {
+      display: "block",
+      content: "attr(title)",
+      fontWeight: "600",
+      height: 0,
+      overflow: "hidden",
+      visibility: "hidden",
+    },
     "&:hover,&:focus": {
       color: "black",
       // use text shadow to mimic bold text in order to avoid element being moved when it is focused.

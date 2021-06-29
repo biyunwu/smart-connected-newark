@@ -63,55 +63,55 @@ export default function Team() {
       className={classes.sections}
       style={{ paddingTop: "0.5em", fontWeight: 400, minHeight: "60vh"}}
     >
-      <div className={classes.container}>
-        <h1 className={classes.pageTitle}>Team</h1>
-      </div>
-      {teamData.map(organizationObj =>
-        <div className={[classes.container, customClasses.instituteContainer].join(" ")} key={organizationObj.organization}>
-          <h2 style={{ borderBottom: "rgb(154, 154, 154) 1px solid", marginBottom: "30px" }}>{organizationObj.organization}</h2>
-          <GridContainer>
-            <GridItem container spacing={1}>
-              {organizationObj.profiles.map(profile =>
-                <React.Fragment key={profile.name}>
-                  <GridItem item xs={6} md={4} lg={3}>
-                    <a className={customClasses.root}
-                       href={profile.url}
-                       target="_blank"
-                       rel="noreferrer"
-                    >
-                    {/*<div> style={{ textAlign: "center !important" }}*/}
-                      {profile.image !== null ?
-                          <Avatar alt={[profile.name, profile.role, profile.department, organizationObj.organization].join(",")}
-                                  // src={`${profile.image}`}
-                                  src={withPrefix(organizationObj.directory + profile.image)}
-                                  className={customClasses.large}
-                                  style={{alignSelf: 'center'}}
-                          />
-                          :
-                          <Avatar alt={[profile.name, profile.role, profile.department, organizationObj.organization].join(",")}
-                                  className={customClasses.large}
-                                  style={{alignSelf: 'center'}}
-                          >
+      <div className={classes.firstContainer}>
+        {/*<h1 className={classes.pageTitle}>Team</h1>*/}
+        {teamData.map(organizationObj =>
+          <div className={[classes.container, customClasses.instituteContainer].join(" ")} key={organizationObj.organization}>
+            <h2 style={{ borderBottom: "rgb(154, 154, 154) 1px solid", marginBottom: "30px" }}>{organizationObj.organization}</h2>
+            <GridContainer>
+              <GridItem container spacing={1}>
+                {organizationObj.profiles.map(profile =>
+                  <React.Fragment key={profile.name}>
+                    <GridItem item xs={6} md={4} lg={3}>
+                      <a className={customClasses.root}
+                         href={profile.url}
+                         target="_blank"
+                         rel="noreferrer"
+                      >
+                      {/*<div> style={{ textAlign: "center !important" }}*/}
+                        {profile.image !== null ?
+                            <Avatar alt={[profile.name, profile.role, profile.department, organizationObj.organization].join(",")}
+                                    // src={`${profile.image}`}
+                                    src={withPrefix(organizationObj.directory + profile.image)}
+                                    className={customClasses.large}
+                                    style={{alignSelf: 'center'}}
+                            />
+                            :
+                            <Avatar alt={[profile.name, profile.role, profile.department, organizationObj.organization].join(",")}
+                                    className={customClasses.large}
+                                    style={{alignSelf: 'center'}}
+                            >
+                              {profile.name}
+                            </Avatar>
+                        }
+                        <div className={classes.markdownStyle}>
+                          <p style={{ margin: "5px auto 10px auto"}} >
                             {profile.name}
-                          </Avatar>
-                      }
-                      <div className={classes.markdownStyle}>
-                        <p style={{ margin: "5px auto 10px auto"}} >
-                          {profile.name}
-                          <br/>
-                          {profile.role}
-                          <br/>
-                          {profile.department}
-                        </p>
-                      </div>
-                    </a>
-                  </GridItem>
-                </React.Fragment>
-              )}
-            </GridItem>
-          </GridContainer>
-        </div>
-      )}
+                            <br/>
+                            {profile.role}
+                            <br/>
+                            {profile.department}
+                          </p>
+                        </div>
+                      </a>
+                    </GridItem>
+                  </React.Fragment>
+                )}
+              </GridItem>
+            </GridContainer>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

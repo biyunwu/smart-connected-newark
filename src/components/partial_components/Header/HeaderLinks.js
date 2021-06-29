@@ -54,16 +54,17 @@ export default function HeaderLinks(props) {
         {siteInfo.pageNames.map(name =>
             <ListItem className={classes.listItem} key={name}>
               <Link to={name === siteInfo.pageNames[0] ? "/" : "/" + name}
-                    className={classes.listItem}
+                    className={`${classes.listItem} ${classes.navLink}`}
                     activeStyle={{ textDecoration: "underline", color: "black" }}
               >
-                <Button
-                    // href={name === siteInfo.pageNames[0] ? siteInfo.domain : siteInfo.domain + name}
-                    color="transparent"
-                    className={classes.navLink}
-                >
-                  { name }
-                </Button>
+                {name}
+                {/*<Button*/}
+                {/*    // href={name === siteInfo.pageNames[0] ? siteInfo.domain : siteInfo.domain + name}*/}
+                {/*    color="transparent"*/}
+                {/*    className={classes.navLink}*/}
+                {/*>*/}
+                {/*  { name }*/}
+                {/*</Button>*/}
               </Link>
             </ListItem>
         )}

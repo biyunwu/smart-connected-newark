@@ -25,20 +25,20 @@ export default function Research() {
             className={classes.sections}
             style={{ paddingTop: "0.5em", fontWeight: 400, minHeight: "90vh" }}
         >
-            <div className={classes.container}><h1 className={classes.pageTitle}>Research</h1></div>
-            {
-                researchInfo.map(researchObj =>
-                    <div className={classes.container} key={researchObj.title} style={{maxWidth: "50em", minHeight: "60vh"}}>
-                        <h2>{researchObj.title}</h2>
-                        <Divider/>
-                        <div className={customClasses.markdownStyle}>
-                            <ReactMarkdown children={researchObj.content} linkTatget="_blank" sourcePos={true}/>
+            <article className={classes.firstContainer}>
+                {
+                    researchInfo.map(researchObj =>
+                        <div className={classes.container} key={researchObj.title} style={{maxWidth: "50em", minHeight: "60vh"}}>
+                            <h2>{researchObj.title}</h2>
+                            <Divider/>
+                            <div className={customClasses.markdownStyle}>
+                                <ReactMarkdown children={researchObj.content} linkTatget="_blank" sourcePos={true}/>
+                            </div>
+                            <img src={withPrefix(researchObj.image)} alt={researchObj.title} style={{ maxWidth: "min(100%, 50em)"}} />
                         </div>
-                        <img src={withPrefix(researchObj.image)} alt={researchObj.title} style={{ maxWidth: "min(100%, 50em)"}} />
-                    </div>
-                )
-            }
-
+                    )
+                }
+            </article>
         </div>
     );
 }

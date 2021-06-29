@@ -6,27 +6,46 @@ export const homeData = {
 `,
     updates: [
         {
-        time: "11/20/2020",
-        // markdown
-        content:
-            "Our project team met with Newark Chief Operating Officer Natasha Rogers.",
-        },
-        {
+            time: "05/21/2021",
+            content: // markdown
+                "Our paper won the [Best Paper Award in ICCPS’21](https://smartcities.rutgers.edu/publication).",
+        }, {
+            time: "05/21/2021",
+            content:
+                "Our project team met with our partners at Newark.",
+        }, {
+            time: "04/16/2021",
+            content:
+                "Our project team met with our partners at Newark.",
+        }, {
+            time: "03/12/2021",
+            content:
+                "Our project team met with our partners at Newark.",
+        }, {
+            time: "02/26/2021",
+            content:
+                "Our project team met with our partners at Newark.",
+        }, {
+            time: "02/03/2021",
+            content:
+                "Our project team met with our partners at Newark.",
+        }, {
+            time: "11/20/2020",
+            content:
+                "Our project team met with Newark Chief Operating Officer Natasha Rogers.",
+        }, {
             time: "11/06/2020",
                 content:
             "Our project team met with Newark IT Manager Sherronda Carroll and her team.",
-        },
-        {
+        }, {
             time: "10/27/2020",
                 content:
             "Our project team met with Newark Senior Policy Advisor Shoshanna Page.",
-        },
-        {
+        }, {
             time: "09/09/2020",
                 content:
             "Our project team met with Newark City Planning Officer Chris Watson.",
-        },
-        {
+        }, {
             time: "07/10/2020",
                 content:
             "Our project is funded by [NSF](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1952096).",

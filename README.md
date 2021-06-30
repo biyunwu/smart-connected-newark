@@ -10,18 +10,28 @@
     <h4>A project funded by the <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1952096" target="_blank" rel="noreferrer">National Science Foundation</a></h4>
 </div>
 
+## ⚠️ Prerequisite
+
+An active LTS `Node.js` environment is required for this project. [`Node.js v14`](https://nodejs.org/en/about/releases/) is used for the project.
+
+Install project dependencies:
+
+```shell
+cd smart-connected-newark/
+npm install
+```
+
 ## 🚀 Quick start
 
-1.  **Start developing.**
+1.  **Start developing**
 
     Navigate into the project directory and start it up.
 
     ```shell
-    cd smart-connected-newark/
     npm run develop
     ```
 
-2.  **Open the code and start customizing!**
+2.  **Open the code and start customizing**
 
     The site is now running at http://localhost:8000 .
 
@@ -61,10 +71,10 @@
     * `data/` stores most of the contents that are rendered by pages.
     * `images/` is a folder of images that are fetched dynamically in building time.
     * `material_style/` has the foundational styling files for this project.
-    * `pages/` has `.js` files whose names are identical to the path names of the website. For example, `index.js` corresponds to the homepage `https://smartcities.rutgers.edu` and `impacts.js` corresponds to the page `https://smartcities.rutgers.edu/impacts`. Refer to [Routing](https://www.gatsbyjs.com/docs/reference/routing/creating-routes/#define-routes-in-srcpages) for more info on Gatsby routing mechanism.
+    * `pages/` has `.js` files whose names are identical to the path names of the website (except `index.js` which corresponds to the homepage `https://smartcities.rutgers.edu`). For example, `impacts.js` corresponds to the page `https://smartcities.rutgers.edu/impacts`. Refer to [Routing](https://www.gatsbyjs.com/docs/reference/routing/creating-routes/#define-routes-in-srcpages) for more info on Gatsby routing mechanism.
     
 
-- `static/`: static assets that are [outside of the module system](https://www.gatsbyjs.com/docs/how-to/images-and-media/static-folder/).
+- `static/`: static assets that are [outside of the module system](https://www.gatsbyjs.com/docs/how-to/images-and-media/static-folder/). Files in this folder are copied to the production bundle without processing.
 
 ## 💻 Open Source Credits:
 - [Gatsby.js](https://www.gatsbyjs.com/)

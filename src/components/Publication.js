@@ -88,6 +88,8 @@ export default function Publication() {
                                                             </div>
                                                         </div>
                                                     }
+                                                    {/*new line after current item*/}
+                                                    <ReactMarkdown children={`&nbsp;`} sourcePos={true}/>
                                                 </React.Fragment>
                                             )}
                                         </div>

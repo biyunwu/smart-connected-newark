@@ -3,6 +3,26 @@ export const publicationData = [
         year: 2021,
         articles: [
             {
+                clickable: false,
+                articleName: `
+* #### eRoute: Mobility-Driven Integration of Heterogeneous Urban Cyber-Physical Systems under Disruptive Events
+
+    Yukun Yuan, Desheng Zhang, Fei Miao, John A. Stankovic, Tian He, George Pappas, Shan Lin.
+    
+    *IEEE Transactions on Mobile Computing, 2021*
+`,
+            },
+            {
+                clickable: false,
+                articleName: `
+* #### Predictive Monitoring with Logic-Calibrated Uncertainty for Cyber-Physical Systems
+
+    Meiyi Ma, John Stankovic, Ezio Bartocci and Lu Feng.
+    
+    *International Conference on Embedded Software (EMSOFT), 2021*
+`,
+            },
+            {
                 clickable: true,
                 articleName:
 `* #### DeResolver: A Decentralized Negotiation and Conflict Resolution Framework for Smart City Services

@@ -67,8 +67,16 @@ npm install
 ## 📂 File structure
     
 - `src/`:
-    * `components/` contains all components that are used by pages.
-    * `data/` stores most of the contents that are rendered by pages.
+    * `components/` contains all components that are used by pages. Webpage elements with respect to components:
+        * Navbar: `src/components/partial_components/Header/Header.js`.
+        * Nav links: `src/components/partial_components/Header/HeaderLinks.js`.
+        * Elements in the homepage except the image slideshow: `src/components/Home.js`; image slideshow: `src/partial_components/Slideshow.js`.
+        * Team page: `src/components/Team.js`.
+        * Research page: `src/components/Research.js`.
+        * Publication page: `src/components/Publication.js`.
+        * Study page: `src/components/Study.js`.
+        * Impact page: `src/components/Impact.js`.
+    * `data/` stores most of the contents that are rendered by pages. Each webpage has a corresponding folder in `data/` that stores the page content.
     * `images/` is a folder of images that are fetched dynamically in building time.
     * `material_style/` has the foundational styling files for this project.
     * `pages/` has `.js` files whose names are identical to the path names of the website (except `index.js` which corresponds to the homepage `https://smartcities.rutgers.edu`). For example, `impacts.js` corresponds to the page `https://smartcities.rutgers.edu/impacts`. Refer to [Routing](https://www.gatsbyjs.com/docs/reference/routing/creating-routes/#define-routes-in-srcpages) for more info on Gatsby routing mechanism.

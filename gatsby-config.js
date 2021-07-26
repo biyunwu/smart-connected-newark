@@ -14,14 +14,14 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     `gatsby-plugin-remove-trailing-slashes`,
-    {
-      resolve: 'gatsby-plugin-zopfli',
-      options: {
-        extensions: ['css', 'html', 'js', 'svg'],
-        verbose: true,
-        verbose_more: false,
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-zopfli',
+    //   options: {
+    //     extensions: ['css', 'html', 'js', 'svg'],
+    //     verbose: true,
+    //     verbose_more: false,
+    //   }
+    // },
     // {
     //   resolve: 'gatsby-plugin-robots-txt',
     //   options: {

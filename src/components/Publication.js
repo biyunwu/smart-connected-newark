@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "../material_style/partial_style/componentsSections/basicsStyle.js";
 import ReactMarkdown from 'react-markdown'
+import * as style from "../style/markdown-styles.module.css";
 import rehypeRaw from 'rehype-raw'
 import {publicationData} from "../data/publication/publicationData";
 import GridContainer from "./partial_components/Grid/GridContainer";
@@ -59,6 +60,7 @@ export default function Publication() {
                                                 <React.Fragment>
                                                     <ReactMarkdown
                                                         rehypePlugins={[rehypeRaw]}
+                                                        className={style.reactMarkDown}
                                                         children={articleObj.articleName}
                                                         linkTarget="_blank"
                                                         sourcePos={true}
@@ -88,8 +90,6 @@ export default function Publication() {
                                                             </div>
                                                         </div>
                                                     }
-                                                    {/*new line after current item*/}
-                                                    <ReactMarkdown children={`&nbsp;`} sourcePos={true}/>
                                                 </React.Fragment>
                                             )}
                                         </div>
